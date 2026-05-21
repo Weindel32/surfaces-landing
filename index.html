@@ -123,7 +123,7 @@ nav.scrolled .nav-cta{color:var(--charcoal);border-color:rgba(26,23,20,.35)}
 }
 
 .hero-scroll{
-  position:absolute;bottom:38px;left:50%;transform:translateX(-50%);z-index:2;
+  position:absolute;bottom:18px;left:64px;z-index:2;
   display:flex;flex-direction:column;align-items:center;gap:8px;
   opacity:0;animation:fadeIn 1s 1.5s forwards;
 }
@@ -259,7 +259,7 @@ footer{background:var(--charcoal);padding:56px 80px 36px}
   .nav-links{display:none}
   .hero-content{grid-template-columns:1fr;padding:0 28px 60px}
   .hero-right{display:none}
-  .hero-scroll{left:50%;transform:translateX(-50%)}
+  .hero-scroll{left:24px}
   .hero-img img{object-position:55% 30%}
   .manifesto,.surfaces,.ps,.craft,.cta-band{padding:80px 28px}
   .sg{grid-template-columns:1fr;height:auto}
@@ -315,15 +315,34 @@ footer{background:var(--charcoal);padding:56px 80px 36px}
 <!-- MANIFESTO -->
 <section class="manifesto">
   <div class="m-du-wm" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300">
-      <path fill="white" fill-rule="evenodd" d="M20,20 L20,280 L105,280 C195,280 205,228 205,150 C205,72 195,20 105,20 Z M75,70 L105,70 C152,70 154,106 154,150 C154,194 152,230 105,230 L75,230 Z"/>
-      <path fill="white" fill-rule="evenodd" d="M220,20 L400,20 L400,205 Q400,285 310,285 Q220,285 220,205 Z M275,20 L345,20 L345,205 Q345,240 310,240 Q275,240 275,205 Z"/>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 620">
+      <!-- D: outer bowl + inner counter (evenodd creates the hole) -->
+      <path fill="white" fill-rule="evenodd" d="
+        M 30,30 L 30,415 L 148,415
+        C 318,415 368,342 368,220
+        C 368,98 318,30 148,30 Z
+        M 133,122 L 133,318
+        L 162,318
+        C 256,318 272,275 272,220
+        C 272,165 256,122 162,122 Z
+      "/>
+      <!-- U: outer boundary + inner hole (evenodd creates U shape) -->
+      <path fill="white" fill-rule="evenodd" d="
+        M 258,30 L 258,478
+        C 258,572 298,605 352,605
+        C 406,605 446,572 446,478
+        L 446,30 Z
+        M 320,30 L 320,464
+        C 320,524 334,544 352,544
+        C 370,544 384,524 384,464
+        L 384,30 Z
+      "/>
     </svg>
   </div>
   <p class="reveal m-tag">The Concept</p>
   <h2 class="reveal m-title rd1">Tre superfici.<br><em>Tre modi di stare in campo.</em></h2>
   <p class="reveal m-body rd2">Ogni superficie ha le sue regole, il suo ritmo, la sua estetica.<br>SURFACES è il nostro omaggio alla cultura del tennis<br>nella sua forma più autentica.</p>
-  <div class="reveal m-w rd3">W</div>
+
 </section>
 
 <!-- SURFACES -->
