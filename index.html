@@ -123,7 +123,7 @@ nav.scrolled .nav-cta{color:var(--charcoal);border-color:rgba(26,23,20,.35)}
 }
 
 .hero-scroll{
-  position:absolute;bottom:38px;right:64px;z-index:2;
+  position:absolute;bottom:38px;left:50%;transform:translateX(-50%);z-index:2;
   display:flex;flex-direction:column;align-items:center;gap:8px;
   opacity:0;animation:fadeIn 1s 1.5s forwards;
 }
@@ -133,7 +133,9 @@ nav.scrolled .nav-cta{color:var(--charcoal);border-color:rgba(26,23,20,.35)}
 
 /* ── MANIFESTO ── */
 .manifesto{background:var(--charcoal);padding:112px 80px;text-align:center;position:relative;overflow:hidden}
-.manifesto::before{content:'W';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--serif);font-size:580px;font-weight:300;color:rgba(255,255,255,.022);pointer-events:none;line-height:1}
+.manifesto::before{content:'';display:none}
+.m-du-wm{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;opacity:.022;pointer-events:none;z-index:0}
+.m-du-wm svg{width:100%;height:auto;display:block}
 .m-tag{font-size:9px;font-weight:500;letter-spacing:.42em;text-transform:uppercase;color:var(--clay-light);margin-bottom:36px}
 .m-title{font-family:var(--serif);font-size:clamp(30px,4.5vw,58px);font-weight:300;color:var(--cream);line-height:1.18;max-width:860px;margin:0 auto 36px;position:relative;z-index:1}
 .m-title em{font-style:italic;color:rgba(245,240,232,.48)}
@@ -257,7 +259,7 @@ footer{background:var(--charcoal);padding:56px 80px 36px}
   .nav-links{display:none}
   .hero-content{grid-template-columns:1fr;padding:0 28px 60px}
   .hero-right{display:none}
-  .hero-scroll{right:24px}
+  .hero-scroll{left:50%;transform:translateX(-50%)}
   .hero-img img{object-position:55% 30%}
   .manifesto,.surfaces,.ps,.craft,.cta-band{padding:80px 28px}
   .sg{grid-template-columns:1fr;height:auto}
@@ -303,7 +305,7 @@ footer{background:var(--charcoal);padding:56px 80px 36px}
       </div>
     </div>
     <div class="hero-right">
-      <p class="hero-badge-line">CLAY Collection · 2024</p>
+      <p class="hero-badge-line">CLAY Collection · 2026</p>
       <p class="hero-badge-text">Lenta. Profonda.<br>Elegante.</p>
     </div>
   </div>
@@ -312,6 +314,12 @@ footer{background:var(--charcoal);padding:56px 80px 36px}
 
 <!-- MANIFESTO -->
 <section class="manifesto">
+  <div class="m-du-wm" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300">
+      <path fill="white" fill-rule="evenodd" d="M20,20 L20,280 L105,280 C195,280 205,228 205,150 C205,72 195,20 105,20 Z M75,70 L105,70 C152,70 154,106 154,150 C154,194 152,230 105,230 L75,230 Z"/>
+      <path fill="white" fill-rule="evenodd" d="M220,20 L400,20 L400,205 Q400,285 310,285 Q220,285 220,205 Z M275,20 L345,20 L345,205 Q345,240 310,240 Q275,240 275,205 Z"/>
+    </svg>
+  </div>
   <p class="reveal m-tag">The Concept</p>
   <h2 class="reveal m-title rd1">Tre superfici.<br><em>Tre modi di stare in campo.</em></h2>
   <p class="reveal m-body rd2">Ogni superficie ha le sue regole, il suo ritmo, la sua estetica.<br>SURFACES è il nostro omaggio alla cultura del tennis<br>nella sua forma più autentica.</p>
