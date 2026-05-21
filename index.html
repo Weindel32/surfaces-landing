@@ -134,7 +134,7 @@ nav.scrolled .nav-cta{color:var(--charcoal);border-color:rgba(26,23,20,.35)}
 /* ── MANIFESTO ── */
 .manifesto{background:var(--charcoal);padding:112px 80px;text-align:center;position:relative;overflow:hidden}
 .manifesto::before{content:'';display:none}
-.m-du-wm{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:680px;opacity:.028;pointer-events:none;z-index:0}
+.m-du-wm{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:680px;opacity:.13;pointer-events:none;z-index:0}
 .m-du-wm svg{width:100%;height:auto;display:block}
 .m-tag{font-size:9px;font-weight:500;letter-spacing:.42em;text-transform:uppercase;color:var(--clay-light);margin-bottom:36px}
 .m-title{font-family:var(--serif);font-size:clamp(30px,4.5vw,58px);font-weight:300;color:var(--cream);line-height:1.18;max-width:860px;margin:0 auto 36px;position:relative;z-index:1}
@@ -316,26 +316,14 @@ footer{background:var(--charcoal);padding:56px 80px 36px}
 <section class="manifesto">
   <div class="m-du-wm" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 660">
-      <!-- D: outer shape + counter hole (evenodd punches the D eye) -->
-      <path fill="white" fill-rule="evenodd" d="
-        M 28,28 L 28,430 L 138,430
-        C 340,430 392,354 392,229
-        C 392,104 340,28 138,28 Z
-        M 128,118 L 128,340 L 152,340
-        C 250,340 268,294 268,229
-        C 268,164 250,118 152,118 Z
-      "/>
-      <!-- U: behind D — left bar overlaps D counter, emerges below D, right bar full height -->
-      <path fill="white" fill-rule="evenodd" d="
-        M 228,28 L 228,492
-        C 228,592 300,630 415,630
-        C 530,630 558,592 558,492
-        L 558,28 Z
-        M 322,28 L 322,478
-        C 322,538 370,562 415,562
-        C 460,562 482,538 482,478
-        L 482,28 Z
-      "/>
+      <!-- D outer shape -->
+      <path fill="none" stroke="white" stroke-width="7" d="M 28,28 L 28,430 L 138,430 C 340,430 392,354 392,229 C 392,104 340,28 138,28 Z"/>
+      <!-- D inner counter -->
+      <path fill="none" stroke="white" stroke-width="7" d="M 128,118 L 128,340 L 152,340 C 250,340 268,294 268,229 C 268,164 250,118 152,118 Z"/>
+      <!-- U outer shape -->
+      <path fill="none" stroke="white" stroke-width="7" d="M 228,28 L 228,492 C 228,592 300,630 415,630 C 530,630 558,592 558,492 L 558,28 Z"/>
+      <!-- U inner counter -->
+      <path fill="none" stroke="white" stroke-width="7" d="M 322,28 L 322,478 C 322,538 370,562 415,562 C 460,562 482,538 482,478 L 482,28 Z"/>
     </svg>
   </div>
   <p class="reveal m-tag">The Concept</p>
